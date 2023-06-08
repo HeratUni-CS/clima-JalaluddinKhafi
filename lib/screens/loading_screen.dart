@@ -22,7 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   }
   void getData(){
-    
+
   }
 
   @override
