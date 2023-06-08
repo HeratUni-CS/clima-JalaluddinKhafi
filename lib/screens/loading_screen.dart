@@ -11,6 +11,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     getPosition();
+    getData();
   }
 
 
@@ -21,8 +22,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
     print(locations.longitude);
 
   }
-  void getData(){
-
+  void getData() async {
+    Response response= await get('https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}' as Uri);
+    print(response.body);
   }
 
   @override
