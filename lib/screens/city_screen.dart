@@ -19,7 +19,6 @@ class _CityScreenState extends State<CityScreen> {
         ),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
-
           child: Column(
             children: <Widget>[
               Align(
@@ -34,7 +33,13 @@ class _CityScreenState extends State<CityScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(20.0),
-                child: null,
+                child: TextField(
+                  style: TextStyle(color: Colors.black),
+                  decoration: kTextfield,
+                  onChanged: (value){
+                    print(value);
+                  },
+                ),
               ),
               TextButton(
                 onPressed: () {},
